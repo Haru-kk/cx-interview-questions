@@ -1,0 +1,72 @@
+Documentations:
+
+4 files are needed to run the script
+
+------------------------------------------
+
+pricer.py
+
+This is excuting Python file, please modify other 3 files (catalogue, basket, offers) as needed and execute pricer.py without any arguments.
+
+------------------------------------------
+
+catalogue
+
+This is a list of products in the shop,
+devided by a tabulation, the 1st column is the product name, the 2nd column is the price. The price has no currency description or the mark.
+
+File example:
+
+Baked Beans     0.99
+Biscuits        1.20
+Sardines        1.89
+Shampoo (Small) 2.00
+Shampoo (Medium)        2.50
+Shampoo (Large) 3.50
+
+------------------------------------------
+
+basket
+
+This is the customer's buying products. 
+devided by a tabulation, the 1st column is the product name, the 2nd column is the quantity.
+
+File example:
+
+Sardines        2
+salmon  3
+Biscuits        6
+Shampoo (Small) 1
+
+------------------------------------------
+
+offers  
+
+This is a list of the offers for discount.
+devided by a tabulation, the 1st column is the product name, the 2nd column is the discount description.
+The discount description can be two different patterns:
+	1, Percentage discount : "25% discount"
+	2, Buy 2 get 1 free discount : "Baked Beans     buy 2 get 1 free"
+
+File example:
+
+Sardines        25% discount
+Baked Beans     buy 3 get 1 free
+Biscuits        buy 2 get 1 free
+Baked Beans     buy 2 1 free
+
+------------------------------------------
+
+Warning messages:
+
+WARNING: Unvalid offer syntax: Baked Beans	buy 2 1 free
+
+This message means the offer file has unvalid line, the valid offer descriptions are two:
+
+	1, Percentage discount : "25% discount"
+	2, Buy 2 get 1 free discount : "Baked Beans     buy 2 get 1 free"
+Please modify the numbers into the each offer amount.
+
+WARNING: WARNING: Item 'salmon' is not on the catalogue
+
+This message means the input item in the basket is not in the catalogue list items.
